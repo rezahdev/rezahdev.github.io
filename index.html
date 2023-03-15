@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Reza H. Portfolio">
+        <meta property="og:site_name" content="Rezahdev.com">
+        <meta property="og:url" content="https://rezahdev.com">
+        <meta property="og:description" content="Reza H. Personal Portfolio Site">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://rezahdev/resources/og.png">
+        <title>Portfolio Site</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a id="about_link" href="#about">ABOUT</a>
+                <a href="#skill">SKILLS</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <div id="about">
+            <img src="https://media.giphy.com/media/TRklv98Fvo0Tu/giphy.gif" width="240" height="135" />
+            <p id="title-name"></p>
+            <p id="about-text"></p>
+            <a href="#skill">Portfolio</a>
+        </div>
+
+        <div id="skill">
+            <h2>Top Skills</h2>
+            <div class="skill-section">
+                <div>
+                    <img src="resources/csharp.png" />
+                    <p>C#</p>
+                </div>
+
+                <div>
+                    <img src="resources/net.png" />
+                    <p>.NET</p>
+                </div>
+
+                <div>
+                    <img src="resources/javascript.png" />
+                    <p>JavaScript</p>
+                </div>
+
+                <div>
+                    <img src="resources/php.png" />
+                    <p>PHP</p>
+                </div>
+
+                <div>
+                    <img src="resources/sql.png" />
+                    <p>SQL</p>
+                </div>
+
+                <div>
+                    <img src="resources/html.png" />
+                    <p>HTML/CSS</p>
+                </div>
+
+                <div>
+                    <img src="resources/angular.png" />
+                    <p>Angular</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Personal Projects</h2>
+        <div id="portfolio">
+            <div class="box">
+                <img src="resources/phinanze.gif">
+                <h3>Phinanze</h3>
+                <p>Phinanze is a personal finance management application for Windows PC that allows users to 
+                    easily manage personal fiannces and see advanced reports and statistics based on time-periods, filters, and/or 
+                    categories. It also utilizes data encryption and remote databases to prevent data loss. To check more or 
+                    install the latest version of Phinanze app, click the button below. 
+                </p>
+                <a target="_blank" href="https://github.com/rezahdev/phinanze">Check Details</a>
+            </div>
+            <div class="box">
+                <img src="resources/randsbook.png">
+                <h3>RandsBook</h3>
+                <p>A responsive web-based personal library application with reading tracker and community features where 
+                    users can engage through posts. The application provides advanced book search feature through open Library API. 
+                    Click the button below to check details or visit www.randsBook.com to check the live version fo the app. 
+                </p>
+                <a target="_blank" href="https://github.com/rezahdev/randsbook">Check Details</a>
+            </div>
+
+            <div class="box">
+                <img src="resources/cfos2.png">
+                <h3>UWCFOS</h3>
+                <p>A web-based concept campus food ordering and order management application that provides all-in-one functionalities 
+                    including admin features for maangeing the cafes, employees, and menu items, employee features for managing live orders,
+                    and customer features for online ordering. The app also provides real-time order tracking and other advanced features. 
+                </p>
+                <a href="https://github.com/rezahdev/cfos">Check Details</a>
+            </div>
+            
+            <div class="box">
+                <img src="resources/cms2.png">
+                <h3>UW Impact CMS</h3>
+                <p>An easy-to-use and practical web-based content management application built as part of a web development project which I started 
+                    during COVID-19 to provide UWinnipeg student clubs with free modern responsive websites to enahnce their online presence and increase
+                    student engagement. UW students clubs can use this app to update all contents on their club websites including event info,
+                     group info, contact info, team info, external message inbox and more.  
+                </p>
+                <a target="_blank" href="https://github.com/rezahdev/uw_impact_cms">Check Details</a>
+            </div>
+            
+            <div class="box">
+                <img src="resources/uniclubdataapi.png">
+                <h3>University Club Data API</h3>
+                <p>API for information about various university clubs built with C#, .NET Core. 
+                </p>
+                <a href="https://github.com/rezahdev/Phinanze-API" >Check Details</a>
+            </div>
+
+            <div class="box">
+                <img src="resources/ers.png">
+                <h3>Employee Records Management Console App</h3>
+                <p>A simple employee record manangement console app.</p>
+                <a target="_blank" href="https://github.com/rezahdev/ers">Check Details</a>
+            </div>
+
+            <div class="box">
+                <img src="resources/unity.png">
+                <h3>Unity 3D FPS Survival Game</h3>
+                <p>3D FPS survival game for PC built with C# and Unity. 
+                </p>
+                <a target="_blank" href="https://github.com/rezahdev/survivemars">Check Details</a>
+            </div>
+        </div>
+
+        <div id="contact">
+            <p>Contact</p>
+            <form action="#" onsubmit="na()">
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Your Email">
+                <textarea placeholder="Write your message here"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; All Rights Reserved</p>
+            <a href="credits.html">Credits and Acknowledgement</a>
+        </footer>
+
+    </body>
+</html>
+
+<script>
+    let i = 0;
+    let interval = 45;
+    let text = "Hi, this is Reza!";
+    window.onload = typeWriter();
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("title-name").textContent += text.charAt(i++);
+            setTimeout(typeWriter, interval);
+        } else {
+            document.getElementById("about-text").textContent = "I am a recent Computer Science graduate and a passionate " +
+                                                                "Software Developer."
+        }
+    }
+
+    function na() {
+        event.preventDefault();
+        alert('Sorry, this contact method is currently disabled!');
+    }
+</script>
