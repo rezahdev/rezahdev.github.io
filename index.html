@@ -156,15 +156,14 @@
 <script>
     let i = 0;
     let interval = 45;
-    let text = "Hi, this is Reza!";
+    let text = "Reza Hossain";
     window.onload = typeWriter();
     function typeWriter() {
         if (i < text.length) {
             document.getElementById("title-name").textContent += text.charAt(i++);
             setTimeout(typeWriter, interval);
         } else {
-            document.getElementById("about-text").textContent = "I am a recent Computer Science graduate and a passionate " +
-                                                                "Software Developer."
+            document.getElementById("about-text").textContent = "Software Developer"
         }
     }
 
